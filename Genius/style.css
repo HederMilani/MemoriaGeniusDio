@@ -13,7 +13,8 @@ body{
 
 .genius{
     display: grid;                                      /*Definindo o layout da div como grid para poder dividir em partes*/
-    grid-template-areas: 'green red' 'yellow blue';     /*Definir os nomes para as partres do grid*/
+    grid-template-areas: 'greenArea redArea' 
+    'yellowArea blueArea';     /*Definir os nomes para as partres do grid*/
     grid-gap: 10px;                                     /* definindo o espaco entre as areas do grid*/
     border: 1px solid #ffffff;
     background-color: #ffffff;
@@ -21,4 +22,31 @@ body{
     margin-top: 2,5%;
     width: 700px;
     height: 700px;
+}
+.yellow{
+    grid-area: yellowArea;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.blue{
+    grid-area: blueArea;                                    /*Definir qual parte do grid estamos estilizando*/
+    background-color: blue;             
+    border-bottom-right-radius: 100%;                    /*Definir que apenas a borda que está aparente devera ser ondulada*/
+}
+
+.red{ 
+    grid-area: redArea;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.green{
+    grid-area: greenArea;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.selected{
+    opacity: 0,8;
 }
