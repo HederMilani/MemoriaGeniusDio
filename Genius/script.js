@@ -36,7 +36,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {          //Definir o tempo para apagar a cor
         element.classList.remove('selected');
-    });
+    }, number);
 }
 
 //Função para conferir a ordem com os clickes
@@ -108,9 +108,9 @@ let playGame = () => {
 }
 
 //Eventos para capturar os clicks na pagina
-green.addEventListener('click', click(0));
-red.addEventListener('click', click(1));
-yellow.addEventListener('click', click(2));
-blue.addEventListener('click', click(3));
+green.onclick = () => click(0);
+red.onclick = () => click(1);
+yellow.onclick = () => click(2);
+blue.onclick = () => click(3);
 
 playGame();
